@@ -4,7 +4,18 @@
 abstract class Price {
     abstract int getPriceCode();
     abstract double getCharge(int daysRented);
+    int getFrequentRenterPoints(int daysRented){
+        return 1;
+    }
 
+
+    /*int getFrequentRenterPoints(int daysRented) {
+        // add frequent renter points
+        // add bonus for a two day new release rental
+        if ((getPriceCode() == Movie.NEW_RELEASE) && daysRented > 1)
+            return 2;
+        else return 1;
+}
    /* double getCharge(int daysRented) {
         double result = 0;
         switch (getPriceCode()) {
